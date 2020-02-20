@@ -7,6 +7,40 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="59*"/>
+            <RowDefinition Height="298*"/>
+            <RowDefinition Height="62*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="37*"  />
+            <ColumnDefinition Width="255*" />
+            <ColumnDefinition Width="104*" />
+        </Grid.ColumnDefinitions>
+        <DataGrid x:Name="dgUsers" AutoGenerateColumns="False" Loaded="dgUsers_Loaded" IsReadOnly="True" Grid.Column="1" Grid.Row="1">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Path=Id}" Header="Id" />
+                <DataGridTextColumn Binding="{Binding Path=FirstName}" Header="Ім'я" />
+                <DataGridTextColumn Binding="{Binding Path=LastName}" Header="Прізвище" />
+                <DataGridTextColumn Binding="{Binding Path=Age}" Header="Вік"/>
+                <DataGridTemplateColumn Header="Фото">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Image Source="{Binding Path=Image}" Width="100" Height="100" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Button 
+            Grid.Column="2" 
+            Grid.Row="1" 
+            Content="Добавити користувача"  
+            Margin="5 0 5 0" 
+            Height="50" 
+            Name="btnAddUser"
+            Click="Button_Click"
+            VerticalAlignment="Top" />
     </Grid>
 </Window>

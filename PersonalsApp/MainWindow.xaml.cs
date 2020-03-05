@@ -47,5 +47,10 @@ namespace PersonalsApp
             AddPersonalWindow dlg = new AddPersonalWindow();
             dlg.ShowDialog();
         }
+
+        private void btnAddUsers_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -42,5 +42,7 @@
             Name="btnAddUser"
             Click="Button_Click"
             VerticalAlignment="Top" />
+        <Button Grid.Column="2" Grid.Row="1" Content="Добавити багато користувачів" Height="50" Name="btnAddUsers" Margin="5 0 5 0" Click="btnAddUsers_Click"/>
+        <TextBox x:Name="txtCount" Grid.Row="1" Grid.Column="2" Height="50" Margin="5 120 5 0" />
     </Grid>
 </Window>

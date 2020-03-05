@@ -44,5 +44,7 @@
             VerticalAlignment="Top" />
         <Button Grid.Column="2" Grid.Row="1" Content="Добавити багато користувачів" Height="50" Name="btnAddUsers" Margin="5 0 5 0" Click="btnAddUsers_Click"/>
         <TextBox x:Name="txtCount" Grid.Row="1" Grid.Column="2" Height="50" Margin="5 120 5 0" />
+        <ProgressBar x:Name="pbUsers" Height="25" Grid.Row="1" Grid.Column="2" Margin="5 200 5 0" Minimum="0" Maximum="100" />
+        <TextBlock Grid.Row="1" x:Name="tbCountOfAdded" Grid.Column="2" Margin="5 270 5 0" TextAlignment="Center" Text="0" />
     </Grid>
 </Window>
